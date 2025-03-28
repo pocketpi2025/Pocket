@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>PocketPi - Merchant Dashboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app-container p-20-0 merchant-dashboard">
+      <div class="p-20">
+        <header>
+          <div class="profile-section">
+            <div class="profile-pic">
+              <img src="images/Profile.png" alt="Profile" />
+            </div>
+            <span class="upgrade-text">Upgrade Plan</span>
+          </div>
+          <div class="app-icon">
+            <img src="images/PocketPi.png" alt="PocketPi" />
+          </div>
+          <div class="header-icons">
+            <button class="icon-btn" id="syncBtn">
+                <img src="images/Scan.png" alt="Scan" />
+            </button>
+            <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#exampleModalMerchant">
+              <img src="images/Setting.png" alt="Setting" />
+            </button>
+          </div>
+        </header>
+
+        <div class="wallet-tabs">
+          <button class="tab-btn" data-tab="individual">Individual</button>
+          <button class="tab-btn active" data-tab="business">Business</button>
+        </div>
+
+        <div class="wallet-id">
+          <span id="walletAddress">hs7229dhsdhsj2987475</span>
+          <button class="copy-btn">
+            <img src="images/Copy.png" alt="Copy" />
+          </button>
+        </div>
+
+        <div class="balance-section">
+          <p class="balance-label">Current Balance</p>
+          <h1 class="balance-amount">31.4159 Pi</h1>
+        </div>
+
+        <button
+          class="action-btn receive-btn full-width"
+          id="merchantReceiveBtn" style="background-color: #fff;color: #000;"
+        >
+          <span class="btn-icon"><img src="images/receive-money.png" alt="Receive Money" /></span>
+          Receive
+        </button>
+
+        <button class="address-book-btn">Salary Disbursement</button>
+
+        <div class="stats-section">
+          <div class="stats-header">
+            <div class="stats-dropdown">
+              Stats for: last 7 days
+              <span>
+                <img src="images/down-arrow.png" alt="Down Arrow">
+              </span>
+            </div>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-label">Sales Overview</div>
+              <div class="stat-value">31415.9 Pi</div>
+              <div class="stat-change">+31%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Repeated Customers</div>
+              <div class="stat-value">314</div>
+              <div class="stat-change">+31%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="transaction-section transaction-section-top">
+        <h2>Transaction History</h2>
+        <div class="transaction-list">
+          <!-- Transactions will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Modal -->
+    <div class="modal fade user-setting-modal" id="exampleModalMerchant" tabindex="-1" aria-labelledby="exampleModalMerchantLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalMerchantLabel">Settings</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="setting-cont-box">
+              <div class="setting-icon-box">
+                <img src="images/Employee.png" alt="">
+              </div>
+              <h6 class="setting-cont-title">Add Individual Address</h6>
+            </div>
+            <div class="setting-cont-box">
+              <div class="setting-icon-box">
+                <img src="images/Renew.png" alt="">
+              </div>
+              <h6 class="setting-cont-title">Renew Subscription</h6>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

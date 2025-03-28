@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>PocketPi - Send Pi</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="receive-center">
+            <button class="back-btn">
+                <img src="images/Back.png" alt="Back">
+            </button>
+            <div class="app-icon" style="margin-left: -26px;">
+                <img src="images/PocketPi.png" alt="PocketPi" />
+            </div>
+            <div class="header-right">
+                <!-- <button class="scan-btn">
+                    <img src="images/Scan.png" alt="Scan" />
+                </button> -->
+            </div>
+        </header>
+        <div class="wallet-tabs" style="width: 100%;">
+            <button class="tab-btn active" data-tab="">Wallet Address</button>
+            <button class="tab-btn" data-tab="">Scan QR</button>
+        </div>
+        <div class="send-form">
+            <div class="input-group">
+                <div class="input-wrapper send-input-box">
+                    <input type="text" placeholder="Enter Wallet Address">
+                    <button class="paste-btn">Paste</button>
+                </div>
+                <button class="address-book-link">Select from Address Book</button>
+            </div>
+
+            <div class="input-group">
+                <input type="text" placeholder="Enter Notes (optional)" class="notes-input">
+            </div>
+
+            <div class="amount-section">
+                <label>Enter Pi Amount</label>
+                <div class="amount-display">31.415 Pi</div>
+            </div>
+
+            <button class="action-btn full-width send-pi-btn">Send Pi</button>
+
+            <!-- <div class="numpad">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>.</button>
+                <button>0</button>
+                <button class="backspace">⌫</button>
+            </div> -->
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>PocketPi Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app-container p-20-0" id="mainApp">
+      <div id="userDashboard" class="page active">
+        <div class="p-20">
+          <header>
+            <div class="profile-section">
+              <div class="profile-pic">
+                <img src="images/Profile.png" alt="Profile" />
+              </div>
+            </div>
+            <div class="app-icon" style="margin-left: 26px;">
+              <img src="images/PocketPi.png" alt="PocketPi" />
+            </div>
+            <div class="header-icons">
+              <button class="icon-btn" id="syncBtn">
+                <img src="images/Scan.png" alt="Scan" />
+              </button>
+              <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="images/Setting.png" alt="Setting" />
+              </button>
+            </div>
+          </header>
+
+          <div class="wallet-tabs">
+            <button class="tab-btn active" data-tab="individual">
+              Individual
+            </button>
+            <button class="tab-btn" data-tab="business">Business</button>
+          </div>
+
+          <div class="wallet-id">
+            <span id="walletAddress">hs7229dhsdhsj2987475</span>
+            <button class="copy-btn">
+              <img src="images/Copy.png" alt="Copy" />
+            </button>
+          </div>
+
+          <div class="balance-section">
+            <p class="balance-label">Current Balance</p>
+            <h1 class="balance-amount">31.4159 Pi</h1>
+            <p class="wallet-limit">Max Wallet Limit = 314 Pi</p>
+          </div>
+
+          <div class="action-buttons">
+            <button class="action-btn send-btn" id="sendBtn">
+              <span class="btn-icon">
+                <img src="images/send-money.png" alt="Send Money" />
+              </span>
+              Send
+            </button>
+            <button class="action-btn receive-btn" id="receive-merchant">
+              <span class="btn-icon">
+                <img src="images/receive-money.png" alt="Receive Money" />
+              </span>
+              Receive
+            </button>
+          </div>
+
+          <button class="address-book-btn">Address Book</button>
+        </div>
+
+        <div class="transaction-section">
+          <h2>Transaction History</h2>
+          <div class="transaction-list">
+            <!-- Transactions will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade user-setting-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Settings</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="setting-cont-box">
+              <div class="setting-icon-box">
+                <img src="images/Suitcase.png" alt="">
+              </div>
+              <h6 class="setting-cont-title">Add Business Address</h6>
+            </div>
+            <div class="setting-cont-box">
+              <div class="setting-icon-box">
+                <img src="images/Employee.png" alt="">
+              </div>
+              <h6 class="setting-cont-title">Add Employee Address</h6>
+            </div>
+            <div class="setting-cont-box">
+              <div class="setting-icon-box">
+                <img src="images/Autopay.png" alt="">
+              </div>
+              <h6 class="setting-cont-title">Set Autopay </h6>
+            </div>
+            <div class="setting-cont-box">
+              <div class="setting-icon-box">
+                <img src="images/Configure.png" alt="">
+              </div>
+              <h6 class="setting-cont-title">Configure Salary Disbursement</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
